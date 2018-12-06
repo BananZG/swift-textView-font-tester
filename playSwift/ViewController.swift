@@ -57,19 +57,27 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.textView.font = UIFont(name: font, size: 17)
     }
     
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
+    private func reload(){
         self.picker.reloadAllComponents()
+        if listOfFonts.count>0 {
+            self.picker.selectRow(0, inComponent: 0, animated: false)
+            self.textView.font = UIFont(name: listOfFonts.first!, size: 17)
+        }
+        
     }
     
-    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        self.picker.reloadAllComponents()
-        return true
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        self.searchBar.resignFirstResponder()
+        self.reload()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.reload()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        self.picker.reloadAllComponents()
+        self.reload()
     }
 
 }

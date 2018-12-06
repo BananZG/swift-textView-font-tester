@@ -15,6 +15,7 @@
 		E5A1A1BE21B8C56C00876859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A1A1BC21B8C56C00876859 /* LaunchScreen.storyboard */; };
 		E5A1A1C921B8C56C00876859 /* playSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A1A1C821B8C56C00876859 /* playSwiftTests.swift */; };
 		E5A1A1D421B8C56C00876859 /* playSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A1A1D321B8C56C00876859 /* playSwiftUITests.swift */; };
+		E5A1A1E221B8FF7F00876859 /* SimSun.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5A1A1E121B8FF7F00876859 /* SimSun.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E5A1A1CF21B8C56C00876859 /* playSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = playSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A1A1D321B8C56C00876859 /* playSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playSwiftUITests.swift; sourceTree = "<group>"; };
 		E5A1A1D521B8C56C00876859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5A1A1E121B8FF7F00876859 /* SimSun.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimSun.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				E5A1A1BC21B8C56C00876859 /* LaunchScreen.storyboard */,
 				E5A1A1BF21B8C56C00876859 /* Info.plist */,
 				E5A1A1B721B8C56C00876859 /* playSwift.xcdatamodeld */,
+				E5A1A1E121B8FF7F00876859 /* SimSun.ttf */,
 			);
 			path = playSwift;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5A1A1BE21B8C56C00876859 /* LaunchScreen.storyboard in Resources */,
+				E5A1A1E221B8FF7F00876859 /* SimSun.ttf in Resources */,
 				E5A1A1BB21B8C56C00876859 /* Assets.xcassets in Resources */,
 				E5A1A1B621B8C56C00876859 /* Main.storyboard in Resources */,
 			);
