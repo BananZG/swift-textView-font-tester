@@ -37,11 +37,28 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
         }
         
-        
+        Signal.merge(searchBar.reactive.searchButtonClicked, searchBar.reactive.cancelButtonClicked).observeValues {
+            [weak self] in
+            if let weakSelf = self {
+                weakSelf.searchBar.resignFirstResponder()
+            }
+        }
     }
+    
+    /*
+     awakeFromNib
+     viewDidLoad
+     viewWillAppear
+     viewWillLayoutSubviews
+     viewDidLayoutSubviews
+     viewDidAppear
+     viewWillLayoutSubviews
+     viewDidLayoutSubviews
+     */
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("viewDidLoad")
         // Do any additional setup after loading the view, typically from a nib.
         bindViewModel()
     }
@@ -61,9 +78,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return viewModel.getFont(forIndex: row)
-    }
-    
-    private func reload(){
     }
     
 }
